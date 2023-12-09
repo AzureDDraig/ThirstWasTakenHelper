@@ -115,11 +115,11 @@ item_entry = tk.Entry(root)
 item_entry.grid(row=3, sticky=tk.E+tk.W)
  
 tk.Label(root, text="Thirst amount:", bg='#5DA6C3').grid(row=4, sticky=tk.W)
-hydration_scale = tk.Scale(root, from_=1, to=20, resolution=1, orient=tk.HORIZONTAL)
+hydration_scale = tk.Scale(root, from_=-10, to=20, resolution=1, orient=tk.HORIZONTAL)
 hydration_scale.grid(row=5, sticky=tk.E+tk.W)
  
 tk.Label(root, text="Quench Amount:", bg='#5DA6C3').grid(row=6, sticky=tk.W)
-quenching_scale = tk.Scale(root, from_=1, to=20, resolution=1, orient=tk.HORIZONTAL)
+quenching_scale = tk.Scale(root, from_=-10, to=20, resolution=1, orient=tk.HORIZONTAL)
 quenching_scale.grid(row=7, sticky=tk.E+tk.W)
  
 # Create the add button
@@ -153,8 +153,54 @@ mods_menu.add_cascade(label="Croptopia", menu=croptopia_menu)
 # Create the "Crops" menu under "Croptopia"
 crops_menu = tk.Menu(croptopia_menu, tearoff=0)
 croptopia_menu.add_cascade(label="Crops", menu=crops_menu)
-
-# Add the rest of your code here for the "Crops" submenu...
+ 
+# Create the "Fruits" menu under "Crops"
+fruits_menu = tk.Menu(crops_menu, tearoff=0)
+crops_menu.add_cascade(label="Fruits", menu=fruits_menu)
+ 
+# Add a command to open the web page
+fruits_menu.add_command(label="https://croptopia.fandom.com/wiki/Crops#Fruits", command=lambda: webbrowser.open("https://croptopia.fandom.com/wiki/Crops#Fruits"))
+ 
+# Add items to the "Fruits" menu
+fruits = ["Blackberry", "Blueberry", "Cantaloupe", "Cranberry", "Currant", "Elderberry", "Grape", "Honeydew", "Kiwi", "Pineapple", "Raspberry", "Saguaro", "Strawberry"]
+for fruit in fruits:
+    fruits_menu.add_command(label=fruit, command=lambda fruit=fruit: set_item("Croptopia", fruit))
+ 
+# Create the "Vegetables" menu under "Crops"
+vegetables_menu = tk.Menu(crops_menu, tearoff=0)
+crops_menu.add_cascade(label="Vegetables", menu=vegetables_menu)
+ 
+# Add a command to open the web page
+vegetables_menu.add_command(label="https://croptopia.fandom.com/wiki/Crops#Vegetables", command=lambda: webbrowser.open("https://croptopia.fandom.com/wiki/Crops#Vegetables"))
+ 
+# Add items to the "Vegetables" menu
+vegetables = ["Artichoke", "Asparagus", "Bell Pepper", "Black Bean", "Broccoli", "Cabbage", "Cauliflower", "Celery", "Chile Pepper", "Corn", "Cucumber", "Eggplant", "Garlic", "Green Bean", "Green Onion", "Hops", "Kale", "Leek", "Lettuce", "Olive", "Onion", "Radish", "Rhubarb", "Rutabaga", "Soybean", "Spinach", "Squash", "Sweet Potato", "Tomatillo", "Tomato", "Turnip", "Yam", "Zucchini"]
+for vegetable in vegetables:
+    vegetables_menu.add_command(label=vegetable, command=lambda vegetable=vegetable: set_item("Croptopia", vegetable))
+ 
+# Create the "Other" menu under "Crops"
+other_menu = tk.Menu(crops_menu, tearoff=0)
+crops_menu.add_cascade(label="Other", menu=other_menu)
+ 
+# Add a command to open the web page
+other_menu.add_command(label="https://croptopia.fandom.com/wiki/Crops#Other", command=lambda: webbrowser.open("https://croptopia.fandom.com/wiki/Crops#Other"))
+ 
+# Add items to the "Other" menu
+other = ["Coffee Beans","Peanut","Rice","Mustard","Turmeric","Ginger","Basil","Oats","Barley","Vanilla","Pepper","Tea"]
+for other_item in other:
+    other_menu.add_command(label=other_item, command=lambda other_item=other_item: set_item("Croptopia", other_item))
+ 
+# Create the "Tree Crops" menu under "Crops"
+tree_crops_menu = tk.Menu(crops_menu, tearoff=0)
+crops_menu.add_cascade(label="Tree Crops", menu=tree_crops_menu)
+ 
+# Add a command to open the web page
+tree_crops_menu.add_command(label="https://croptopia.fandom.com/wiki/Crops#Tree_Crops", command=lambda: webbrowser.open("https://croptopia.fandom.com/wiki/Crops#Tree_Crops"))
+ 
+# Add items to the "Tree Crops" menu
+tree_crops = ["Apple","Banana","Orange","Persimmon","Plum","Cherry","Lemon","Grapefruit","Kumquat","Peach","Coconut","Nutmeg","Fig","Nectarine","Mango","Dragon Fruit","Star Fruit","Avocado","Apricot","Pear","Lime","Date","Almond","Cashew","Pecan","Walnut","Cinnamon"]
+for tree_crop in tree_crops:
+    tree_crops_menu.add_command(label=tree_crop, command=lambda tree_crop=tree_crop: set_item("Croptopia", tree_crop))
 
 # Create the "Drinks" menu under "Croptopia"
 drinks_menu = tk.Menu(croptopia_menu, tearoff=0)
