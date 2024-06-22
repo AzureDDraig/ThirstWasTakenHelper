@@ -6,6 +6,7 @@ import subprocess
 import os
 import re
 import tomli
+import urllib.request
 
 def create_settings_file():
     export_window = tk.Toplevel()
@@ -109,7 +110,9 @@ def delete_all_item():
     # Update the treeview
     update_treeview()
 
-
+def open_discord_link():
+    webbrowser.open("https://discord.gg/7c9sVMYhvA")
+    
 def update_treeview(*args):
     global item_list
     if args:
@@ -189,6 +192,87 @@ def addAll(modName):
         hydration_scale.set(0)
         quenching_scale.set(0)
 
+# --- GitHub TOML File Checker Function (Modified) ---
+def check_github_folder():
+    # Create a new window for the TOML file list
+    toml_window = tk.Toplevel(root)
+    toml_window.title("Available Preconfigured Mods")
+
+    # Create a frame to hold the buttons
+    button_frame = tk.Frame(toml_window)
+    button_frame.pack(fill=tk.BOTH, expand=True)
+
+    # Create a canvas to make the button frame scrollable
+    canvas = tk.Canvas(button_frame)
+    canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+    # Create a scrollbar for the canvas
+    scrollbar = tk.Scrollbar(button_frame, orient=tk.VERTICAL, command=canvas.yview)
+    scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+    # Configure the canvas to use the scrollbar
+    canvas.configure(yscrollcommand=scrollbar.set)
+    canvas.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+
+    # Create a frame inside the canvas to hold the buttons
+    inner_frame = tk.Frame(canvas)
+    canvas.create_window((0, 0), window=inner_frame, anchor="nw")
+
+    # Create a frame to hold the labels INSIDE the inner_frame
+    label_frame = tk.Frame(inner_frame)
+    label_frame.pack(fill=tk.BOTH, expand=True)  # Allow the label_frame to expand
+
+    repo_url = "https://github.com/AzureDDraig/ThirstWasTakenHelper"  
+    folder_path = "Compat%20Library"
+    api_url = f"{repo_url.replace('github.com', 'api.github.com/repos')}/contents/{folder_path}"
+
+    # Label to display messages
+    message_label = tk.Label(toml_window, text="")
+    message_label.pack()
+
+    try:
+        response = urllib.request.urlopen(api_url)
+        folder_contents = json.loads(response.read().decode())
+
+        for item in folder_contents:
+            if item["type"] == "file" and item["name"].endswith(".toml"):
+                # Remove the ".toml" extension from the file name
+                file_name = item["name"][:-5]
+
+                # Create a button for the file name (without .toml) and the download logic
+                def download_toml(url=item["download_url"], name=file_name):
+                    try:
+                        # Download the file content
+                        with urllib.request.urlopen(url) as response:
+                            file_content = response.read()
+
+                        # Create the "Compat Library" subfolder if it doesn't exist
+                        compat_library_dir = "Compat Library"
+                        os.makedirs(compat_library_dir, exist_ok=True)
+
+                        # Save the TOML file to the "Compat Library" subfolder
+                        toml_file_path = os.path.join(compat_library_dir, name + ".toml")
+                        with open(toml_file_path, 'wb') as f:  # Use 'wb' for binary mode
+                            f.write(file_content)
+
+                        message_label.config(text=f"Successfully downloaded {name} Restart to take effect", fg="green")
+
+                    except urllib.error.URLError as e:
+                        message_label.config(text=f"Network Error downloading {name}: {e.reason}", fg="red")
+                    except Exception as e:
+                        message_label.config(text=f"Unexpected Error downloading {name}: {e}", fg="red")
+
+                button = tk.Button(label_frame, text=file_name, command=download_toml)
+                button.pack()
+
+    except urllib.error.URLError as e:
+        error_label.config(text=f"Network Error: {e.reason}")
+    except json.JSONDecodeError as e:
+        error_label.config(text=f"JSON Parsing Error: {e}")
+    except Exception as e:
+        error_label.config(text=f"Unexpected Error: {e}")
+
+
 # Load the existing items
 item_list = load_items()
 
@@ -244,6 +328,14 @@ mods_menubutton.pack(side='top', fill='x', expand=True)
 mods_menu = tk.Menu(mods_menubutton, tearoff=0)
 mods_menubutton.configure(menu=mods_menu)
  
+# Preconfigured Mods Button
+preconfigured_mods_button = tk.Button(modify_frame, text="Preconfigured Mods", command=check_github_folder)
+preconfigured_mods_button.pack(side='top', fill='x', expand=True)
+
+# Error label (initially hidden)
+error_label = tk.Label(root, text="", fg="red")
+error_label.pack()
+
 # Create the mod menus
 
 # Look into configs folder, record the name of the toml files: remember this name, formatted by removing underscores and replacing with ' ', 
@@ -285,7 +377,15 @@ delete_button.pack(side='top', fill='x', expand=True)
 delete_button = tk.Button(modify_frame, text="Delete All Items", command=delete_all_item, bg='red')
 delete_button.pack(side='top', fill='x', expand=True)
 
-
+# Create the Contribute button that redirects to discord
+contribute_button = tk.Button(
+    modify_frame,
+    text="Contribute Your Mods or Compat Files Here!",
+    command=open_discord_link,
+    bg='yellow',
+    fg='black',
+)
+contribute_button.pack(side='top', fill='x', expand=True)
 
 
 # Create the search label and entry field
