@@ -4,6 +4,8 @@
 
 All you need to do is run the Thirstscript.py and then copy the items from the config you created to inside the items_settings file.
 
+Thanks to Pyrael (NOT PARVEL, SORRY TIRED COMMIT) For his and his friend's additions and modifications that allow for the compat library, plus the FAQ! 
+
 FAQ
 
 Q: What does this tool do?
