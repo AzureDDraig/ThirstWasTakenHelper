@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = [["twilightdelight:thorn_rose_tea", 2, 2], ["twilightdelight:torchberry_juice", 3, 4], ["twilightdelight:phytochemical_juice", 3, 4], ["twilightdelight:glacier_ice_tea", 2, 3], ["twilightdelight:twilight_spring", 2, 3], ["twilightdelight:tea_drink", -1, -3]]
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = [["twilightdelight:borer_tear_soup", 4, 4], ["twilightdelight:ghast_brain_salad", -4, -5], ["twilightdelight:thousand_plant_stew", 3, 4]]
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list': '',
+        #Format': ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    

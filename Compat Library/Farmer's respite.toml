@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = [["farmersrespite:coffee", 1, 1],["farmersrespite:green_tea", 1, 1], ["farmersrespite:yellow_tea", 1, 1], ["farmersrespite:black_tea", 1, 1], ["farmersrespite:rose_hip_tea", 1, 1], ["farmersrespite:dandelion_tea", 1, 1]]
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = []
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list': '',
+        #Format': ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    

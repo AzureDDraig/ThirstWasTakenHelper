@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = [["pamhc2foodcore:creamitem", 4, 4], ["pamhc2foodcore:freshmilkitem", 3, 2], ["pamhc2foodcore:freshwateritem", 5, 1], ["pamhc2foodcore:fruitpunchitem", 6, 5], ["pamhc2foodcore:glowberryjuiceitem", 3, 7], ["pamhc2foodcore:glowberrysmoothieitem", 5, 10], ["pamhc2foodcore:hotchocolateitem", 5, 4], ["pamhc2foodcore:melonjuiceitem", 3, 8], ["pamhc2foodcore:melonsmoothieitem", 5, 9], ["pamhc2foodcore:p8juiceitem", 7, 11], ["pamhc2foodcore:sweetberryjuiceitem", 1, 7], ["pamhc2foodcore:sweetberrysmoothieitem", 3, 9]]
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = [["pamhc2foodcore:applesauceitem", 4, 2], ["pamhc2foodcore:carrotsoupitem", 5, 2], ["pamhc2foodcore:cookiesandmilkitem", 4, 2], ["pamhc2foodcore:potatosoupitem", 5, 1], ["pamhc2foodcore:pumpkinsoupitem", 6, 3], ["pamhc2foodcore:stewitem", 5, 1], ["pamhc2foodcore:stockitem", 3, 3], ["pamhc2foodcore:applejuiceitem", 3, 8]]
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list': '',
+        #Format': ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    

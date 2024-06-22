@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = [["vinery:noir_wine", 14, 14], ["vinery:magnetic_wine", 1, 2], ["vinery:cherry_wine", 0, 3], ["vinery:chorus_wine", 0, 3], ["vinery:king_danis_wine", 7, 7], ["vinery:mellohi_wine", 7, 8], ["vinery:stal_wine", 6, 6], ["vinery:strad_wine", 6, 6], ["vinery:solaris_wine", 6, 6], ["vinery:bolvar_wine", 4, 4], ["vinery:aegis_wine", 6, 6], ["vinery:clark_wine", 3, 7], ["vinery:chenet_wine", 8, 6], ["vinery:apple_wine", 3, 4], ["vinery:apple_cider", 7, 7], ["vinery:jellie_wine", 16, 16], ["vinery:red_wine", 5, 6], ["vinery:praetorian_wine", 5, 3], ["vinery:jo_special_mixture", 8, 7], ["vinery:cristel_wine", 8, 7], ["vinery:creepers_crush", 12, 13], ["vinery:villagers_fright", 13, 13], ["vinery:glowing_wine", 5, 4], ["vinery:mead", 2, 12], ["vinery:bottle_mojang_noir", 4, 8], ["vinery:eiswein", 4, 8]]
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = [["vinery:taiga_grapes_red", 3, 2], ["vinery:red_grape", 4, 1], ["vinery:white_grape", 4, 1], ["vinery:savanna_grapes_red", 5, 0], ["vinery:savanna_grapes_white", 5, 0], ["vinery:jungle_grapes_red", 4, 2], ["vinery:jungle_grapes_white", 4, 2], ["vinery:apple_mash", 6, 3], ["vinery:cherry", 4, 1], ["vinery:rotten_cherry", 0, 5]]
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list': '',
+        #Format': ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    

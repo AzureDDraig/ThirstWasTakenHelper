@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk": ""
+        #Format": [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = [["aetherdelight:aetherflower_tea", 3, 2], ["aetherdelight:swet_syrup", 3, 2]]
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten": ""
+        #Format": [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = [["aetherdelight:bowl_of_blue_berries", 2, 3], ["aetherdelight:bowl_of_enchanted_berries", 4, 5], ["aetherdelight:sweet_and_sour_soup", 3, 4], ["aetherdelight:swet_pudding", 3, 3], ["aetherdelight:ambrosia_glazed_apple", 2, 2], ["aetherdelight:goldenleaf_salad", 2, 2], ["aetherdelight:strange_root_salad", 2, 2], ["aetherdelight:luxbuds_salad", 3, 2], ["aetherdelight:quail_stew", 4, 3],["aetherdelight:ambrosia_dew", 2, 1]]
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list": "",
+        #Format": ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    

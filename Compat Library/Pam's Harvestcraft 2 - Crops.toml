@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = []
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = [["pamhc2crops:barrelcactusitem", 3, 2], ["pamhc2crops:bellpepperitem", 2, 2], ["pamhc2crops:blackberryitem", 3, 2], ["pamhc2crops:blueberryitem", 3, 2], ["pamhc2crops:cabbageitem", 1, 1], ["pamhc2crops:cactusfruititem", 3, 1], ["pamhc2crops:candleberryitem", 3, 1], ["pamhc2crops:cantaloupeitem", 4, 2], ["pamhc2crops:cloudberryitem", 3, 1], ["pamhc2crops:cornitem", 2, 0], ["pamhc2crops:cranberryitem", 3, 1],["pamhc2crops:elderberryitem", 4, 2], ["pamhc2crops:grapeitem", 2, 3], ["pamhc2crops:greengrapeitem", 2, 3], ["pamhc2crops:huckleberryitem", 3, 1], ["pamhc2crops:juniperberryitem", 3, 1], ["pamhc2crops:guaranaitem", 2, 0], ["pamhc2crops:kiwiitem", 2, 1], ["pamhc2crops:lettuceitem", 1, 0], ["pamhc2crops:mulberryitem", 3, 1], ["pamhc2crops:nopalesitem", 2, 0], ["pamhc2crops:pineappleitem", 3, 1], ["pamhc2crops:raspberryitem", 3, 1], ["pamhc2crops:strawberryitem", 2, 1], ["pamhc2crops:tomatilloitem", 2, 0], ["pamhc2crops:wolfberryitem", 3, 0]]
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list': '',
+        #Format': ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    

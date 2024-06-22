@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = []
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = [["pamhc2trees:apricotitem", 2, 1], ["pamhc2trees:cherryitem", 2, 0], ["pamhc2trees:coconutitem", 2, 1], ["pamhc2trees:dateitem", 1, 0], ["pamhc2trees:dragonfruititem", 2, 0], ["pamhc2trees:durianitem", 4, 1], ["pamhc2trees:figitem", 2, 0], ["pamhc2trees:gooseberryitem", 3, 0], ["pamhc2trees:grapefruititem", 3, 1], ["pamhc2trees:guavaitem", 2, 1], ["pamhc2trees:lemonitem", 1, 0], ["pamhc2trees:lycheeitem", 2, 0], ["pamhc2trees:mangoitem", 1, 1], ["pamhc2trees:orangeitem", 3, 1], ["pamhc2trees:papayaitem", 2, 1], ["pamhc2trees:pawpawitem", 2, 0], ["pamhc2trees:peachitem", 2, 0], ["pamhc2trees:limeitem", 1, 0], ["pamhc2trees:passionfruititem", 3, 0], ["pamhc2trees:pearitem", 2, 0], ["pamhc2trees:persimmonitem", 2, 0], ["pamhc2trees:plumitem", 0, 2], ["pamhc2trees:pomegranateitem", 1, 2], ["pamhc2trees:rambutanitem", 1, 1], ["pamhc2trees:soursopitem", 2, 1], ["pamhc2trees:starfruititem", 0, 1]]
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list': '',
+        #Format': ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    

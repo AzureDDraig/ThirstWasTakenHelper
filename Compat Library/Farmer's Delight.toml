@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = [["farmersdelight:apple_cider", 6, 9], ["farmersdelight:melon_juice", 8, 8], ["farmersdelight:milk_bottle", 3, 4], ["farmersdelight:hot_cocoa", 4, 5]]
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = [["farmersdelight:pumpkin_slice", 2, 1], ["farmersdelight:cabbage_leaf", 1, 1], ["farmersdelight:melon_popsicle", 6, 6], ["farmersdelight:fruit_salad", 4, 3], ["farmersdelight:tomato_sauce", 3, 3], ["farmersdelight:mixed_salad", 5, 2], ["farmersdelight:beef_stew", 5, 2], ["farmersdelight:chicken_soup", 6, 3], ["farmersdelight:vegetable_soup", 6, 2], ["farmersdelight:fish_stew", 4, 3], ["farmersdelight:pumpkin_soup", 5, 3], ["farmersdelight:baked_cod_stew", 5, 3], ["farmersdelight:cabbage", 2, 1], ["farmersdelight:tomato", 3, 1], ["farmersdelight:nether_salad", 3, 2], ["farmersdelight:bone_broth", 5, 3], ["farmersdelight:dumplings", 4, 1], ["farmersdelight:noodle_soup", 6, 4]]
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list': '',
+        #Format': ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    

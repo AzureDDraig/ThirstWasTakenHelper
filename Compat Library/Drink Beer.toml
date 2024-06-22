@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = [["drinkbeer:beer_mug", 8, 6], ["drinkbeer:beer_mug_blaze_stout", 10, 6], ["drinkbeer:beer_mug_blaze_milk_stout", 10, 8], ["drinkbeer:beer_mug_apple_lambic", 8, 8], ["drinkbeer:beer_mug_sweet_berry_kriek", 9, 7], ["drinkbeer:beer_mug_haars_icey_pale_lager", 7, 6], ["drinkbeer:beer_mug_pumpkin_kvass", 8, 4], ["drinkbeer:beer_mug_night_howl_kvass", 6, 4], ["drinkbeer:beer_mug_frothy_pink_eggnog", 12, 10]]
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = []
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list': '',
+        #Format': ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    

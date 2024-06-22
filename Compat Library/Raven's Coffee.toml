@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = [["ravencoffee:large_brew_basic", 5, 9], ["ravencoffee:large_brew_sugar", 5, 10], ["ravencoffee:large_brew_apple", 7, 9], ["ravencoffee:large_brew_berry", 7, 9], ["ravencoffee:large_brew_honey", 6, 10], ["ravencoffee:large_brew_chocolate", 10, 8], ["ravencoffee:large_brew_milk", 8, 10], ["ravencoffee:large_brew_mocha", 11, 11], ["ravencoffee:large_brew_awkward", 3, 3], ["ravencoffee:large_brew_carrot", 7, 8], ["ravencoffee:large_brew_golden_carrot", 9, 9], ["ravencoffee:large_brew_cookies_and_cream", 9, 10], ["ravencoffee:large_brew_end", 12, 12], ["ravencoffee:large_brew_melon", 7, 10], ["ravencoffee:large_brew_golden_melon", 9, 10], ["ravencoffee:large_brew_nether", 9, 7], ["ravencoffee:large_brew_phantasm", 9, 7], ["ravencoffee:large_brew_pumpkin_spice_latte", 5, 13], ["ravencoffee:large_brew_pumpkin_spice_latte_with_pumpkin", 11, 13], ["ravencoffee:medium_brew_basic", 5, 4], ["ravencoffee:medium_brew_sugar", 5, 6], ["ravencoffee:medium_brew_apple", 6, 5], ["ravencoffee:medium_brew_berry", 6, 6], ["ravencoffee:medium_brew_honey", 5, 7], ["ravencoffee:medium_brew_chocolate", 4, 4], ["ravencoffee:medium_brew_milk", 6, 5], ["ravencoffee:medium_brew_mocha", 6, 8], ["ravencoffee:medium_brew_awkward", 3, 3], ["ravencoffee:medium_brew_carrot", 5, 7], ["ravencoffee:medium_brew_golden_carrot", 8, 8], ["ravencoffee:medium_brew_cookies_and_cream", 7, 8], ["ravencoffee:medium_brew_end", 7, 7], ["ravencoffee:medium_brew_melon", 8, 7], ["ravencoffee:medium_brew_golden_melon", 9, 9], ["ravencoffee:medium_brew_nether", 6, 6], ["ravencoffee:medium_brew_phantasm", 6, 6], ["ravencoffee:medium_brew_pumpkin_spice_latte", 8, 6], ["ravencoffee:medium_brew_pumpkin_spice_latte_with_pumpkin", 8, 11], ["ravencoffee:mug_brew_basic", 3, 3], ["ravencoffee:mug_brew_sugar", 3, 4], ["ravencoffee:mug_brew_apple", 3, 4], ["ravencoffee:mug_brew_honey", 4, 4], ["ravencoffee:mug_brew_chocolate", 3, 3], ["ravencoffee:mug_brew_milk", 4, 4], ["ravencoffee:mug_brew_mocha", 4, 4], ["ravencoffee:mug_brew_awkward", 2, 2], ["ravencoffee:mug_brew_carrot", 4, 4], ["ravencoffee:mug_brew_golden_carrot", 5, 4], ["ravencoffee:mug_brew_cookies_and_cream", 5, 5], ["ravencoffee:mug_brew_end", 4, 4], ["ravencoffee:mug_brew_melon", 6, 4], ["ravencoffee:mug_brew_golden_melon", 6, 6], ["ravencoffee:mug_brew_nether", 4, 4], ["ravencoffee:mug_brew_phantasm", 4, 4], ["ravencoffee:mug_brew_pumpkin_spice_latte", 6, 4], ["ravencoffee:mug_brew_pumpkin_spice_latte_with_pumpkin", 6, 6], ["ravencoffee:small_brew_basic", 3, 3]]
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = []
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list': '',
+        #Format': ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    

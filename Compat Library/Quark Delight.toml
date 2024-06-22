@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk": ""
+        #Format": [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = [["quarkdelight:cloud_latte", 1, 2], ["quarkdelight:bucket_of_sweet_gelatine", 7, 7]]
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten": ""
+        #Format": [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = [["quarkdelight:cavern_explorer_stew", 6, 6], ["quarkdelight:bowl_of_exotic_fruits", 8, 9], ["quarkdelight:lush_moss_salad", 3, 5], ["quarkdelight:miso_with_bamboo_sprouts", 2, 3]]
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list": "",
+        #Format": ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    

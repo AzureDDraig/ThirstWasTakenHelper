@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk": ""
+        #Format": [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = []
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten": ""
+        #Format": [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = [["alexsmobs:sopa_de_macaco", 4, 4]]
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list": "",
+        #Format": ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    
