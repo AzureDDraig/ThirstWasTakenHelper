@@ -7,26 +7,33 @@ import os
 import re
 import tomli
 import urllib.request
+import argparse
 
 def create_settings_file():
-    export_window = tk.Toplevel()
-    export_window.title("Export File Name")
-    export_window.geometry('405x45')
-    inputtxt = tk.Text(export_window, height = 1, width = 50)
-    # inputtxt.grid(column=0, row=0, sticky="news")
-    inputtxt.pack(side="top", fill='x', expand=True)
-    file_name = ""
-    def fileNameGet():
-        subprocess.run(["python", "Generate_item_settings_file.py", inputtxt.get(1.0, "end-1c")])
-    buttons = tk.Frame(export_window)
-    # buttons.grid(column=0, row=1, sticky=tk.N+tk.W)
-    buttons.pack(side = "bottom", fill='x', expand=True)
-    button_close = tk.Button(buttons, text = "Save", command=lambda : [fileNameGet(), export_window.destroy()], width = 10, padx = 2)
-    button_cancel = tk.Button(buttons, text = "Cancel", command=lambda : [export_window.destroy()], width = 10, padx=2)
-    button_close.grid(column=0, row=0, sticky=tk.N+tk.W)
-    button_cancel.grid(column=1, row=0, sticky=tk.N+tk.W, padx = 5)
-    
-    # Call the Python script
+    with open('items.json', 'r') as f:
+        all_items = json.load(f)
+    with open('tempFoods.json', 'w') as f:
+        json.dump([i[:3] for i in all_items if i[3] == 'food'], f)
+    with open('tempDrinks.json', 'w') as f:
+        json.dump([i[:3] for i in all_items if i[3] == 'drink'], f)
+    with open('tempFoods.json', 'r') as f:
+        foods_items = f.read()
+    with open('tempDrinks.json', 'r') as f:
+        drinks_items = f.read()
+    os.remove('tempDrinks.json')
+    os.remove('tempFoods.json')
+    data_parts = [
+    "\n    [Drinks] \n        #Defines items that will recover thirst when drunk': ''\n        #Format': [[\"item-id-1\", \"hydration-amount\", \"quenching-amount\"], [\"item-id-2\", \"hydration-amount\", \"quenching-amount\"]],\n        drinks = ",
+    drinks_items,
+    "\n    \n    [Foods] \n        #Defines items that will recover thirst when eaten': ''\n        #Format': [[\"item-id-1\", \"hydration-amount\", \"quenching-amount\"], [\"item-id-2\", \"hydration-amount\", \"quenching-amount\"]],\n        foods = ",
+    foods_items,
+    "\n    \n    [Blacklist] \n        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list': '',\n        #Format': [\"examplemod:example_item_1\", \"examplemod:example_item_2\"],\n        itemsBlacklist= []\n    \n"
+]
+
+# Write the data to the file
+    with open('item_settings.toml', 'w') as f:
+        for part in data_parts:
+            f.write(part)
 
     
 # Initialize the list
