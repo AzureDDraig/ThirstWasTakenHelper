@@ -1,0 +1,16 @@
+
+    [Drinks] 
+        #Defines items that will recover thirst when drunk': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        drinks = [["miners_delight:milk_cup", 4, 3]]
+    
+    [Foods] 
+        #Defines items that will recover thirst when eaten': ''
+        #Format': [["item-id-1", "hydration-amount", "quenching-amount"], ["item-id-2", "hydration-amount", "quenching-amount"]],
+        foods = [["miners_delight:cave_soup", 8, 8], ["miners_delight:bat_soup", 5, 5], ["miners_delight:insect_stew", 6, 6], ["miners_delight:beetroot_soup_cup", 3, 3], ["miners_delight:mushroom_stew_cup", 3, 3], ["miners_delight:rabbit_stew_cup", 5, 4], ["miners_delight:baked_cod_stew_cup", 7, 6], ["miners_delight:noodle_soup_cup", 7, 6], ["miners_delight:beef_stew_cup", 6, 4], ["miners_delight:chicken_soup_cup", 6, 4], ["miners_delight:fish_stew_cup", 6, 4], ["miners_delight:pumpkin_soup_cup", 7, 5], ["miners_delight:vegetable_soup_cup", 6, 4], ["miners_delight:bone_broth_cup", 4, 3], ["miners_delight:cave_soup_cup", 5, 4], ["miners_delight:bat_soup_cup", 3, 2], ["miners_delight:insect_stew_cup", 3, 2]]
+    
+    [Blacklist] 
+        #A mod may have added thirst compatibility to an item via code. If you want to edit the thirst values of that item, add an entry in one of the first two lists. If instead you want to remove thirst support for that item, add an entry in this list': '',
+        #Format': ["examplemod:example_item_1", "examplemod:example_item_2"],
+        itemsBlacklist= []
+    
