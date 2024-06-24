@@ -2,7 +2,8 @@
  Simply create a config for items for Thirst was taken
 
 
-All you need to do is run the Thirstscript.py and then copy the items from the config you created to inside the items_settings file.
+All you need to do is run the Thirstscript and then copy the items from the config you created to inside the items_settings file, download the latest release here:
+https://github.com/AzureDDraig/ThirstWasTakenHelper/releases
 
 Thanks to Pyrael (NOT PARVEL, SORRY TIRED COMMIT) For his and his friend's additions and modifications that allow for the compat library, plus the FAQ! 
 
